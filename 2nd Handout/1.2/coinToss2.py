@@ -31,12 +31,16 @@ fileGame.write("#Rodadas em cada Jogo\n")
 fileGame.write("#NRounds Game \n")
 i = 0
 for x in range(1,101):
-	while (game.player1 != 0) or (game.player2 != 0):
+	while (game.player1 != 0) and (game.player2 != 0):
 		i += 1 
 		game.player1,game.player2 = game.round()
-	print "rodada" + str(x) + "acabou"
 	fileGame.write(str(i) + " " + str(x) + "\n")
+	game.player1, game.player2 = game.reset()
 	i = 0
+	continue
+
+
+
 
 
 
