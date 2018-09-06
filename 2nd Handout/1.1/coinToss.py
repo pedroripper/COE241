@@ -27,14 +27,14 @@ class coinToss(object):
 game = coinToss(1000,1000)
 file1 = open("player1.dat","w+")
 file1.write("#Player 1 \n")
-file1.write("#Round Money \n")
+file1.write("#Money Round \n")
 file2 = open("player2.dat", "w+")
 file2.write("#Player 2 \n")
-file2.write("#Round Money \n")
+file2.write("#Money Round \n")
 for i in range(0, 1001):
 	game.player1,game.player2 = game.round()
-	file1.write(str(i) + " " + str(game.player1) + "\n")
-	file2.write(str(i) + " " + str(game.player2) + "\n")
+	file1.write(str(game.player1) + " " + str(i) + "\n")
+	file2.write(str(game.player2) + " " + str(i) + "\n")
 
 
 
