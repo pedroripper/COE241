@@ -29,6 +29,7 @@ game = coinToss(1000,1000)
 fileGame = open("games.dat","w+")
 fileGame.write("#Rodadas em cada Jogo\n")
 fileGame.write("#NRounds Game \n")
+tot = 0
 i = 0
 for x in range(1,101):
 	while (game.player1 != 0) and (game.player2 != 0):
@@ -36,8 +37,10 @@ for x in range(1,101):
 		game.player1,game.player2 = game.round()
 	fileGame.write(str(i) + " " + str(x) + "\n")
 	game.player1, game.player2 = game.reset()
+	tot += i
 	i = 0
 	continue
+print (tot/100)
 
 
 
