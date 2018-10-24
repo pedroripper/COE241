@@ -17,8 +17,8 @@ def normalRandomVariable(n):
     for i in range(n):
         acceptance = True
         tries = 0;
-        tempNumPy = np.random.normal(0,1)
-        fileNormalFunction.write(str(tempNumPy)+"     "+str(2.0*np.exp(-((tempNumPy*1.0)**2.0)/2.0)/((2*pi)**(0.5)))+"\n")
+        normalRandomVariable = np.random.normal(0,1)
+        fileNormalFunction.write(str(normalRandomVariable)+"     "+str(2.0*np.exp(-((normalRandomVariable*1.0)**2.0)/2.0)/((2*pi)**(0.5)))+"\n")
         while acceptance:
             uniformRandomVariable1 = np.random.uniform(0,1)
             uniformRandomVariable2 = np.random.uniform(0,1)
@@ -41,5 +41,3 @@ def normalRandomVariable(n):
 
 
 
-
-normalRandomVariable(10000)
